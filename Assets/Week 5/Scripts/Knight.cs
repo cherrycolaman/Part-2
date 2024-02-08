@@ -22,6 +22,10 @@ public class Knight : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (isDead)
+        {
+            return;
+        }
         movement = destination - (Vector2)transform.position;
         if(movement.magnitude < 0.1)
         {
