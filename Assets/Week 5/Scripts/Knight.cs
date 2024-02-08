@@ -41,7 +41,7 @@ public class Knight : MonoBehaviour
     private void OnMouseDown()
     {
         clickingOnSelf = true;
-        TakeDamage(1);
+        SendMessage("TakeDamage", 1);
     }
     private void OnMouseUp()
     {
