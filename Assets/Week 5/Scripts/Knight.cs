@@ -47,7 +47,7 @@ public class Knight : MonoBehaviour
     {
         clickingOnSelf = false;
     }
-    void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
         health = Mathf.Clamp(health, 0, maxHealth);
