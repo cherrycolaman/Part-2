@@ -40,6 +40,10 @@ public class Knight : MonoBehaviour
         {
             destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
+        if (Input.GetMouseButtonDown(1) && !clickingOnSelf)
+        {
+            animator.SetTrigger("Attack");
+        }
         animator.SetFloat("Movement", movement.magnitude);
     }
     private void OnMouseDown()
