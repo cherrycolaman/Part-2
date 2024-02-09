@@ -13,10 +13,12 @@ public class Knight : MonoBehaviour
     public float health;
     public float maxHealth = 5;
     bool isDead = false;
+    public GameObject weapon;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        weapon = GetComponent<GameObject>();
         animator = GetComponent<Animator>();
         health = maxHealth;
     }
@@ -69,5 +71,9 @@ public class Knight : MonoBehaviour
             isDead = false;
             animator.SetTrigger("TakeDamage");
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        SendMessage("TakeDamage", 1);
     }
 }
