@@ -11,6 +11,7 @@ public class Controller : MonoBehaviour
     public float maxCharge = 1;
     Vector2 direction;
     public static FootballPlayer SelectedPlayer { get; private set; }
+    public static float score;
     public static void SetSelectedPlayer(FootballPlayer player)
     {
         if (SelectedPlayer != null)
