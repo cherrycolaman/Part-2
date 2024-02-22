@@ -17,14 +17,14 @@ public class FootballPlayer : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        Selected(true);
+        Controller.SetSelectedPlayer(this);
     }
     // Update is called once per frame
     void Update()
     {
         
     }
-    private void Selected(bool isSelected)
+    public void Selected(bool isSelected)
     {
         if (isSelected)
         {
