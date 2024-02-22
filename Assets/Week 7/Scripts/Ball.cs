@@ -22,5 +22,7 @@ public class Ball : MonoBehaviour
     {
         Controller.score += 1;
         Debug.Log("+1 Goal!!!");
+        rb.velocity = Vector2.zero;
+        rb.transform.position = Vector2.zero;
     }
 }
