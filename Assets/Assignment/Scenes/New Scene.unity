@@ -459,6 +459,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6700839946516496185, guid: d0cce254807b6c24e8d42399ecaa2d87, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8239237795171159537, guid: d0cce254807b6c24e8d42399ecaa2d87, type: 3}
       propertyPath: m_Name
       value: Dagger

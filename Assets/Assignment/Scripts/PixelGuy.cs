@@ -20,6 +20,7 @@ public class PixelGuy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        health = maxHealth;
     }
     private void FixedUpdate()
     {
