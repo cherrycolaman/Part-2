@@ -14,7 +14,7 @@ public class PixelGuy : MonoBehaviour
     public float speed = 4;
     public float health;
     public float maxHealth = 5;
-    bool isDead = false;
+    bool killed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,5 +38,24 @@ public class PixelGuy : MonoBehaviour
             destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
         animator.SetFloat("Movement", movement.magnitude);
+    }
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        health = Mathf.Clamp(health, 0, maxHealth);
+        if (health == 0)
+        {
+            killed = true;
+            animator.SetTrigger("Death");
+        }
+        else
+        {
+            killed = false;
+            animator.SetTrigger("TakeDamage");
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        SendMessage("TakeDamage", 1);
     }
 }
