@@ -13,7 +13,7 @@ public class PixelGuy : MonoBehaviour
     Animator animator;
     public float speed = 4;
     public float health;
-    public float maxHealth = 5;
+    public float maxHealth = 3;
     bool killed = false;
     // Start is called before the first frame update
     void Start()
