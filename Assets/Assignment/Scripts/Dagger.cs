@@ -13,15 +13,16 @@ public class Dagger : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        direction.x = -3;
+        direction.y = 0;
     }
-
+    private void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + direction * Time.deltaTime);
+    }
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer > 5)
-        {
-            Destroy(gameObject);
-        }
+        
     }
 }
