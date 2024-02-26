@@ -18,7 +18,7 @@ public class DaggerSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spawn = new Vector3(12, Random.Range(-5, 5), 0);
+        spawn = new Vector3(12, Random.Range(-5f, 5f), 0);
         fireDagger();
     }
     void fireDagger()
