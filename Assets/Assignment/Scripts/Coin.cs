@@ -27,5 +27,6 @@ public class Coin : MonoBehaviour
         coinPosition.x = UnityEngine.Random.Range(-6.9f, 3.1f);
         coinPosition.y = UnityEngine.Random.Range(-3.9f, 3.9f);
         rb.MovePosition(coinPosition);
+        rb.velocity = Vector2.zero;
     }
 }
