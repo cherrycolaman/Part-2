@@ -33,6 +33,10 @@ public class PixelGuy : MonoBehaviour
         {
             rb.MovePosition(rb.position + movement.normalized * speed * Time.deltaTime);
         }
+        else
+        {
+            SendMessage("SceneTimer");
+        }
     }
     // Update is called once per frame
     void Update()
