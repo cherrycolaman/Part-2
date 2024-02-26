@@ -29,7 +29,10 @@ public class PixelGuy : MonoBehaviour
         {
             movement = Vector2.zero;
         }
-        rb.MovePosition(rb.position + movement.normalized * speed * Time.deltaTime);
+        if (!killed)
+        {
+            rb.MovePosition(rb.position + movement.normalized * speed * Time.deltaTime);
+        }
     }
     // Update is called once per frame
     void Update()
