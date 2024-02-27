@@ -21,6 +21,9 @@ public class GameOver : MonoBehaviour
     }
     public void SceneTimer()
     {
+        // when scene timer message is received, begins countdown
+        // 2.5 seconds after player death, switches to game over scene
+        // this is to allow the player to see the whole death animation
         timer += Time.deltaTime;
         if (timer > 2.5)
         {

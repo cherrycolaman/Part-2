@@ -20,6 +20,7 @@ public class Reload : MonoBehaviour
     }
     public void ReloadScene()
     {
+        // when retry button is pressed, reloads game scene (previous scene)
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = (currentSceneIndex - 1) % SceneManager.sceneCountInBuildSettings;
         SceneManager.LoadScene(nextSceneIndex);
