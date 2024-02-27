@@ -21,13 +21,13 @@ public class Coin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        rb.velocity = Vector2.zero;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         score += 1;
         coinPosition.x = UnityEngine.Random.Range(-6.9f, 3.1f);
-        coinPosition.y = UnityEngine.Random.Range(-3.9f, 3.9f);
+        coinPosition.y = UnityEngine.Random.Range(-3.5f, 3.5f);
         rb.MovePosition(coinPosition);
         rb.velocity = Vector2.zero;
         textScore.SetText(score.ToString());
